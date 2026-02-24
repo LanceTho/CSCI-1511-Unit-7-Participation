@@ -4,3 +4,14 @@ Reqirements:
 Set up the while loop with a flag
 Use a guard clause to validate input to take only strings - provide a message and continue if it isn't a string
 """
+
+correct_input: bool = False
+while not correct_input:
+    topping: str = input("Enter a pizza topping (enter 'quit' to end): ")
+
+    if topping.isdigit():
+        print("Error: Invalid Input.")
+        continue
+
+    print(f"{topping} will be added to your pizza.")
+    correct_input = True
